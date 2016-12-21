@@ -11,9 +11,9 @@ describe('OutBrain', function() {
   var outbrain;
   var options = {
     OB_ADV_ID: 12345,
-    events: {
-      'fire pixel': 'fire pixel'
-    }
+    events: [
+      'bid_on_item'
+    ]
   };
 
   beforeEach(function() {
@@ -34,7 +34,7 @@ describe('OutBrain', function() {
   it('should have the correct settings', function() {
     analytics.compare(OutBrain, integration('OutBrain')
         .option('OB_ADV_ID', '')
-        .mapping('events'));
+        .option('events'));
   });
 
   describe('after loading', function() {
