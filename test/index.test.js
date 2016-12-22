@@ -54,7 +54,7 @@ describe('OutBrain', function() {
     });
 
     describe('#track', function() {
-      it('should call track and fire pixel', function() {
+      it('should fail to call track and fire pixel', function() {
         analytics.track('bid_onitem');
         analytics.didNotCall(outbrain.load);
       });
