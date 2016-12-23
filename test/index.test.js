@@ -33,7 +33,7 @@ describe('OutBrain', function() {
 
   it('should have the correct settings', function() {
     analytics.compare(OutBrain, integration('OutBrain')
-        .option('OB_ADV_ID', '')
+        .option('obAdvId', '')
         .option('events', []));
   });
 
