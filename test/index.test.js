@@ -47,7 +47,7 @@ describe('OutBrain', function() {
     describe('#track', function() {
       it('should call track and fire pixel', function() {
         analytics.track('bid_on_item');
-        analytics.called(outbrain.load, 'trackpxl', {
+        analytics.called(outbrain.load, 'pixel', {
           obAdvId: outbrain.options.OB_ADV_ID
         });
       });
