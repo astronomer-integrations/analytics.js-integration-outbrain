@@ -10,7 +10,7 @@ describe('OutBrain', function() {
   var analytics;
   var outbrain;
   var options = {
-    OB_ADV_ID: 12345,
+    obAdvId: 12345,
     events: [
       'bid_on_item'
     ]
@@ -48,7 +48,7 @@ describe('OutBrain', function() {
       it('should call track and fire pixel', function() {
         analytics.track('bid_on_item');
         analytics.called(outbrain.load, 'pixel', {
-          obAdvId: outbrain.options.OB_ADV_ID
+          obAdvId: outbrain.options.obAdvId
         });
       });
     });
